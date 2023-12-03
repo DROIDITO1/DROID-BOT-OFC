@@ -14,10 +14,9 @@ let handler = async (m, { text, command, args, usedPrefix }) => {
   let reis = await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&q=" + text)
   let resu = await reis.json()  
   let nama = m.pushName || '1'
-  let api = await fetch("http://api.brainshop.ai/get?bid=153868&key=rcKonOgrUFmn5usX&uid=" + nama + "&msg=" + resu[0][0][0])
+  let api = await fetch("https://api.simsimi.net/v2/?text=" + nama + "&msg=" + resu[0][0][0])
   let res = await api.json()
-  let reis2 = await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=es&dt=t&q=" + res.cnt)
-  let resu2 = await reis2.json()
+    let resu2 = await reis2.json()
   m.reply(resu2[0][0][0])      
   } catch {  
   let reisss = await fetch("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=id&dt=t&q=" + text)
