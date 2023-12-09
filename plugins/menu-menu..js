@@ -42,13 +42,12 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ╰───────────────╯
 ✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥ *INFO* 📡 ❥」
-├➽ *.menu2 <AUDIOS>* *nuevo*
+├➽ *.menu2 <AUDIOS>*
 ├➽ *.animes [imagenes]*
 ├➽ *.grupos*
-├➽ *.owner [contactos]*
+├➽ *.owner [creador]*
 ├➽ *.enable [Opciones para admin"s]
 ├➽ *.tagall*
-├➽ *.comangrupos
 ├➽ *.shop [tienda]*
 ├➽ *.leaderboard <tabla de calificación>
 ├➽ *.reporte [comandos en fallos]*
