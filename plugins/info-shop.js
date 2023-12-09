@@ -3,11 +3,11 @@ var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.present
 var document = doc[Math.floor(Math.random() * doc.length)]    
 let text = `╭「➻❥DROID-8-MD➻❥」
 │➯➻❥ *TIENDA-COMPRAS* ➻❥
-│➯ *.busyall
-│➯ *.bus <cantidad>* 💎
-│➯ *.buyall
-│➯ *.buy <cantidad>* 🧿
-│➯ *.dolares te cobra diamantes*
+│➯💎 *.busyall
+│➯💎 *.bus <cantidad>* 
+│➯💎 *.buyall <gastas toda tu exp por diamantes.>*
+│➯💎 *.buy <cantidad>* 
+│➯💵 *.dolares <te cobra diamantes>*
 ︎╰───────────────╯
 🍁᭢━━━━━━━━━᭥🍁᭢
 ╭「COMANDOS DE RECOMPENSAS DIARIAS」
@@ -18,30 +18,28 @@ let text = `╭「➻❥DROID-8-MD➻❥」
 │➯ /minar3
 ╰───────────────╯
 🍁᭢━━━━━━━━━᭥🍁᭢
-╭「➻❥ *🪙DINERO🪙* ➻❥」
-│➯ *para ver todo tu dinero usa el comando*
+╭「➻❥ *EXTR* ➻❥」
 │➯ *.bal*
-│➯ *.dinero*
-│➯ *Para ver tu tiempo de premium*
+│➯ *.sell
 │➯ *.listprem*
 ︎╰───────────────╯`.trim()   
 let buttonMessage= {
-'document': { url: `https://github.com/OFC-YOVANI/HADES-BOT-OMEGA` },
+'document': { url: `https://tiktok.com/@tony.1p` },
 'mimetype': `application/${document}`,
-'fileName': `⫷᭄ʜᴀᴅᴇs-ʙᴏᴛ-ᴍᴅ﹏✍`,
+'fileName': `TONY-OFC`,
 'fileLength': 99999999999999,
 'pageCount': 200,
 'contextInfo': {
 'forwardingScore': 200,
 'isForwarded': true,
 'externalAdReply': {
-'mediaUrl': 'https://github.com/OFC-YOVANI/HADES-BOT-OMEGA',
+'mediaUrl': 'https://tiktok.com/@tony.1p',
 'mediaType': 2,
 'previewType': 'pdf',
 'title': 'ᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩',
 'body': wm,
 'thumbnail': imagen1,
-'sourceUrl': 'https://youtu.be/4eA5nDxPjOA' }},
+'sourceUrl': 'https://tiktok.com/@tony.1p' }},
 'caption': text,
 'footer': wm,
 //'buttons':[
@@ -52,6 +50,6 @@ conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 }
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
-handler.command = /^(shop|Shop|sell|Sell)$/i
+handler.command = /^(shop|Shop)$/i
 handler.register = true
 export default handler
