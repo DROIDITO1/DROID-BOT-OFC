@@ -2,31 +2,31 @@ let handler = async (m, { conn, usedPrefix }) => {
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]    
 let text = `╭「➻❥DROID-8-MD➻❥」
-│➯➻❥ *TIENDA-COMPRAS* ➻❥
-│➯💎 *.busyall
-│➯💎 *.bus <cantidad>* 
-│➯💎 *.buyall <gastas toda tu exp por diamantes.>*
-│➯💎 *.buy <cantidad>* 
-│➯💵 *.dolares <te cobra diamantes>*
-︎╰───────────────╯
-🍁᭢━━━━━━━━━᭥🍁᭢
+│➯➻❥ *TIENDA-COMPRAS*➻❥
+│➯ *.busyall*
+│➯ *.bus <cantidad>* 
+│➯ *.buyall <gastas toda tu exp por 💎.>*
+│➯ *.buy <cantidad>* 
+│➯ *.dolares <te cobra 💎>*
+︎╰─────────────╯
+💎᭢━━━━━━━━━᭥💎᭢
 ╭「COMANDOS DE RECOMPENSAS DIARIAS」
 │➯ /claim
 │➯ /coffer 
 │➯ /minar
 │➯ /minar2 
 │➯ /minar3
-╰───────────────╯
+╰─────────────╯
 🍁᭢━━━━━━━━━᭥🍁᭢
 ╭「➻❥ *EXTR* ➻❥」
 │➯ *.bal*
 │➯ *.sell
 │➯ *.listprem*
-︎╰───────────────╯`.trim()   
+︎╰─────────────╯`.trim()   
 let buttonMessage= {
 'document': { url: `https://tiktok.com/@tony.1p` },
 'mimetype': `application/${document}`,
-'fileName': `TONY-OFC`,
+'fileName': `DROID-8-MD`,
 'fileLength': 99999999999999,
 'pageCount': 200,
 'contextInfo': {
