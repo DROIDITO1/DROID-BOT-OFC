@@ -35,5 +35,5 @@ let str = `┏━━°❀❬ *𝙋𝙀𝙍𝙁𝙄𝙇* ❭❀°━━┓
 conn.sendFile(m.chat, pp, 'pp.jpg', str, m, false, { contextInfo: { mentionedJid }})}}
 handler.help = ['profile [@user]']
 handler.tags = ['xp']
-handler.command = /^perfil|profile?$/i
+handler.command = /^perfil6|profile6?$/i
 export default handler
