@@ -1,51 +1,39 @@
-import { createHash } from 'crypto';
+import { createHash } from 'crypto'
+import PhoneNumber from 'awesome-phonenumber'
+import fetch from 'node-fetch'
+let handler = async (m, { conn, usedPrefix }) => {
+let pp = 'https://telegra.ph/file/635b82df8d7abb4792eab.jpg'
+//const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './src/avatar_contact.png')
+let user = global.db.data.users[m.sender]
+let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+try {
+pp = await conn.getProfilePicture(who)         //pp = await conn.getProfilePicture(who)
+} catch (e) {
 
-let handler = async (m, { conn, usedPrefix, participants, isPrems }) => {
-  let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
-
-  if (!(who in global.db.data.users)) {
-    // Si no encuentra el perfil, envía la imagen predeterminada
-    let ppDefault = 'https://i.imgur.com/HE1dWt6.png';
-    return conn.sendMessage(m.chat, { image: { url: ppDefault } }, 'extendedTextMessage', { quoted: m });
-  }
-
-  let pp;
-  try {
-    pp = await conn.getProfilePicture(who);
-  } catch (e) {
-    // Maneja la excepción si la obtención de la imagen falla
-    throw `Error al obtener la imagen de perfil: ${e}`;
-  }
-
-  if (pp) {
-    let { name, role, role2, level, limit, money, exp, joincount, lastclaim, registered, regTime, age, premiumTime } = global.db.data.users[who];
-    let username = conn.getName(who);
-    let prem = global.prems.includes(who.split `@`[0]);
-    let sn = createHash('md5').update(who).digest('hex');
-    let str = `╭「➻❥DROID-8-MD➻❥」
-│➯ *𝙽𝙾𝙼𝙱𝚁𝙴:* ${username} ${registered ? '(' + name + ') ' : ''}
-│➯ *link:* wa.me/${who.split`@`[0]}${registered ? '\n*𝙴𝙳𝙰𝙳:* ' + age + ' años' : ''}
-│➯ *⚓Rango:* ${role}
-│➯ *📊Poder:* ${role2}
-│➯ *✳️️Nivel:* ${level}
-│➯ *🧿Experiencia:* ${exp}
-│➯ *💎Diamantes:* ${limit} Usos
-│➯ *👾Droid-Coins:* ${money}
-│➯ *💵dolares:* ${joincount}
-│➯ *💥Registrado:* ${registered ? 'Si' : 'No'}
-│➯ *✔️premium:* ${premiumTime > 0 ? 'Si' : (isPrems ? 'Si' : 'No') || ''}
-│➯ *📝número de serie:* 
-│➯ *${sn}*
-╰───────────────╯`;
-
-    return conn.sendMessage(m.chat, { image: { url: pp } }, 'extendedTextMessage', { quoted: m });
-  } else {
-    throw 'No se pudo encontrar la imagen de perfil.';
-  }
-};
-
-handler.help = ['profile [@user]'];
-handler.tags = ['xp'];
-handler.command = /^perfil|profile?$/i;
-
+} finally {
+let { name, limit, lastclaim, registered, regTime, age } = global.db.data.users[who]
+//let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+let mentionedJid = [who]
+let username = conn.getName(who)
+let prem = global.prems.includes(who.split`@`[0])
+let sn = createHash('md5').update(who).digest('hex')
+let str = `┏━━°❀❬ *𝙋𝙀𝙍𝙁𝙄𝙇* ❭❀°━━┓
+┃ *🔥𝙉𝙤𝙢𝙗𝙧𝙚🔥 :* ${name}
+┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ *✨𝙉𝙪𝙢𝙚𝙧𝙤✨ :* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
+┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ *🔰𝙀𝙩𝙞𝙦𝙪𝙚𝙩𝙖𝙨🔰 :* wa.me/${who.split`@`[0]}${registered ?'\n┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n┃ 𝙀𝙙𝙖𝙙 ' + age + ' *años*' : ''}
+┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ *💎𝙇𝙞𝙢𝙞𝙩𝙚𝙨💎 :* *${limit}* 𝙙𝙚 𝙪𝙨𝙤𝙨
+┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ *❇️𝙍𝙚𝙜𝙞𝙨𝙩𝙧𝙖𝙙𝙤 :* ${user.registered === true ? '✅' : '❌ _#verificar_'}
+┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ *❇️𝙋𝙧𝙚𝙢𝙞𝙪𝙢 :* ${user.premiumTime > 0 ? '✅' : '❌ _#pase premium_'}
+┃┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+┃ *🔰 Mi estado:* ${typeof user.miestado !== 'string' ? '_#miestado || Estado no asignado_' : '_Me siento ' + user.miestado + '_'}
+┗━━━━━━━━━━━━━━`.trim()
+conn.sendFile(m.chat, pp, 'pp.jpg', str, m, false, { contextInfo: { mentionedJid }})}}
+handler.help = ['profile [@user]']
+handler.tags = ['xp']
+handler.command = /^perfil|profile?$/i
 export default handler
