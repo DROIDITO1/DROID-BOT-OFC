@@ -20,15 +20,13 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]    
 let str = `╭「➻❥DROID-8-MD➻❥」
-│➯🐥 *HOLA,➟${taguser}*
-│➯🧑🏻‍💻  DROID *MENU*
-│➯📅 *FECHA ACTUAL:➟${date}*
-︎╰───────────────╯
-╭「➻❥𝐃𝐑𝐎𝐈𝐃-8-𝐌𝐃➻❥」
-│➯👨🏻‍💻 *HOLA,➟${taguser}*
-│ *BIENVENID@ AL MENU*
-│ *PUEDES SEGUIRME EN TIK-TOK*
-│ *http://tiktok.com/@tony.1p*
+┃➯👋🏻 *HOLA: ${taguser}*
+┃➯📅 *FECHA ACTUAL: ${date}*
+︎├──────────⋆
+┃❮❮❮ CANAL OFC ❱❱❱
+┃❤ *SÍGUEME EN MI CANAL* ❤
+┃https://whatsapp.com/channel/0029Va80EZC5fM5f8fXgsQ0F
+┃
 ︎╰───────────────╯
 ✫᭢━━━━━━━━━᭥✫᭢
 ╭─「➻❥ *Estadísticas* ➻❥」
@@ -41,28 +39,28 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *Premium:* ${user.premiumTime > 0 ? '✅' : (isPrems ? '✅' : '❌') || ''}
 ╰───────────────╯
 ✫᭢━━━━━━━━━᭥✫᭢
-╭─「❥ *INFO* 📡 ❥」
+╭─「❥ *ACERCA DE:📝*
 ├➽ *.link [link del bot]*
 ├➽ *.menu2 <AUDIOS>*
 ├➽ *.animes [imagenes]*
-├➽ *.grupos*
+├➽ *.grupos <grupos del creador>*
 ├➽ *.owner [creador]*
 ├➽ *.enable [Opciones para admin"s]
 ├➽ *.tagall*
 ├➽ *.shop [tienda]*
 ├➽ *.leaderboard <tabla de calificación>
-├➽ *.reporte [comandos en fallos]*
+├➽ *.reporte [reportar comandos con errores]*
 ╰───────────────╯
 
-🧑🏻‍💻᭢━━━━━━━━━᭥🧑🏻‍💻᭢
-╭──「❥ *CHATGPT* ❥」
+✫᭢━━━━━━━━━᭥✫᭢
+╭──「❥ *CHATGPT* 📡❥」
 ├➽ *.ia *<Chatgpt>*
 ├➽ *.ia2 <Regenerador de imágenes>
 ├➽ *.iavoz <chatgpt respuesta con audio>
 ├➽ *.bot* <texto>
 ╰───────────────╯
-😼᭢━━━━━━━━━᭥😼᭢
-╭─「❥❤️ *Stickers* ❤️❥」
+✫᭢━━━━━━━━━᭥✫᭢
+╭─「❥ *Stickers* ❥」
 ├➽ *.sticker
 ├➽ *.stickersearch <buscador de 📦 de stickers>
 ├➽ *.wm <paquete | nombre>*
@@ -71,16 +69,16 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *.emojimix ☺&😈*
 ├➽ *.dados*
 ╰───────────────╯
-👀᭢━━━━━━━━━᭥👀᭢
-╭─「❥🤪 *MAKER | FUN* 😍❥」
+✫᭢━━━━━━━━━᭥✫᭢
+╭─「❥ *MAKER | FUN* ❥」
 ├➽ *.lolice @tag*
 ├➽ *.simpcard @tag*
-├➽ *.hornycard <licencia virtual FUN😍>
+├➽ *.hornycard <licencia virtual FUN>
 ├➽ *.estúpido @tag
 ├➽ *.meme*
 ╰───────────────╯
 ✫᭢━━━━━━━━━᭥✫᭢
-╭─「❥🍓 *Wallpaper* 😻 ❥」
+╭─「❥ *Wallpaper* ❥」
 ├➽ *.lolivid*
 ├➽ *.loli*
 ├➽ *.neko*
@@ -92,7 +90,7 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *.cat*
 ├➽ *.wallpaper*
 ╰───────────────╯
-🦅᭢━━━━━━━━━᭥🦅᭢
+✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥ *GRUPO*  ❥」
 ├➽ *.promote @tag*
 ├➽ *.demote @tag*
@@ -107,13 +105,13 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *.unban @tag*
 ├➽ *.kick @tag*
 ╰───────────────╯
-🦅᭢━━━━━━━━━᭥🦅᭢
+✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥💎 *transfer* 💎❥」
 ├➽ *.transferjoincount mas <cantidad>*
 ├➽ *.transferlimit mas <cantidad>*
 ├➽ *.transferxp mas <cantidad>*
 ╰───────────────╯
-🦅᭢━━━━━━━━━᭥🦅᭢
+✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥ *ECONOMÍA Y RECOMPENSAS* ❥」
 ├➽ *.minar*
 ├➽ *.minar2*
@@ -127,12 +125,13 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *.buy <cantidad>*
 ├➽ *.dolares*
 ╰───────────────╯
-🦅᭢━━━━━━━━━᭥🦅᭢
-╭─「❥👀 *REACCIONES STICKER* 👻❥」
+✫᭢━━━━━━━━━᭥✫᭢
+╭─「❥ *REACCIONES* ❥」
 ├➽ *.kiss <tag>*
 ├➽ *.pat* <tag>
-╰───────────────╯
-🦅᭢━━━━━━━━━᭥🦅᭢
+╰───────────────
+
+✫᭢━━━━━━━━━᭥✫᭢
 ╭──「❥🎙️ *Descargas* 📽️❥」
 ├➽ *.wikipedia <busqueda>*
 ├➽ *.animeinfo <nombre>*
@@ -158,7 +157,7 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *.tts [texto a Audio]
 ├➽ *.quemusica resultado*
 ╰───────────────╯
-🦅᭢━━━━━━━━━᭥🦅᭢
+✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥🎮 *Juegos* 🎮❥」
 ├➽ *.gay* <@tag> [perfil gay]
 ├➽ *.doxear <@tag>
@@ -170,7 +169,7 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *.formarpareja [parejas ramdon]*
 ├➽ *.slot [ruleta]
 ︎╰───────────────
-🦅᭢━━━━━━━━━᭥🦅᭢
+✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥🤴 *comandos-owner/admin"s* 🤴❥」
 ├➽ *.block*
 ├➽ *.limpiarbot*
@@ -192,7 +191,7 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *.listcmd*
 ├➽ *.actualizar*
 ╰───────────────╯
-🦅᭢━━━━━━━━━᭥🦅᭢
+✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥🎙️ *convertidor&mp3* 📽️❥」
 ├➽ *.mp3*
 ├➽ *.toimg*
@@ -208,7 +207,7 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *.tovn*
 ├➽ *.togifaud*
 ︎╰───────────────╯
-🦅᭢━━━━━━━━━᭥🦅᭢
+✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥📊 *Otros Comandos* ⚙️❥」
 ├➽ *.hd <imagen>*
 ├➽ *.topdf*
