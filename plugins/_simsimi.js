@@ -1,13 +1,28 @@
-import fetch from 'node-fetch'
-let handler = m => m
+import fetch from 'node-fetch';
 
-handler.before = async (m) => {
-let chat = global.db.data.chats[m.chat]
-if (chat.simi) {
-if (/^.*false|disnable|(turn)?off|0/i.test(m.text)) return
-let textodem = m.text  
-try {
-let ressimi = await fetch(`https://api.simsimi.net/v2/?text=${encodeURIComponent(textodem)}&lc=es`)
-let data = await ressimi.json();                                                             
-if (data.success == 'No s\u00e9 lo qu\u00e9 est\u00e1s diciendo. Por favor ense\u00f1ame.') 
-export default handler
+const handler = async (m, {conn, text, usedPrefix, command}) => {
+  if (!text) {
+    throw `_*< IA - CHARACTER.AI />*_\n\n*[ ℹ️ ] Proporciona un texto.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} Hola, ¿cómo estás?_`;
+  }
+
+  try {
+    conn.sendPresenceUpdate('composing', m.chat);
+
+    const API_URL = `https://vihangayt.me/tools/characterai?q=${encodeURIComponent(text)}`;
+    const response = await fetch(API_URL);
+    const data = await response.json();
+
+    if (data.status && data.data) {
+      const respuestaAPI = data.data;
+      conn.reply(m.chat, respuestaAPI, m);
+    } else {
+      throw '_*< IA - CHARACTER.AI />*_\n\n*[ ℹ️ ] No se pudo obtener una respuesta válida.*';
+    }
+  } catch (error) {
+    throw `_*< IA - CHARACTER.AI />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+  }
+};
+
+handler.command = /^aicharacter$/i;
+
+export default handler;
