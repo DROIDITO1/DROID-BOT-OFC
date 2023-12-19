@@ -40,44 +40,44 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ╰───────────────╯
 ✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥ *ACERCA DE:📝*
-├➽ *.logos <menu de logos>
+├➽ *.logos <menu de logos>*
 ├➽ *.link [link del bot]*
 ├➽ *.menu2 <AUDIOS>*
 ├➽ *.animes [imagenes]*
 ├➽ *.grupos <grupos del creador>*
 ├➽ *.owner [creador]*
-├➽ *.enable [Opciones para admin"s]
+├➽ *.enable [Opciones para admin"s]*
 ├➽ *.tagall*
 ├➽ *.shop [tienda]*
 ├➽ *.leaderboard <tabla de calificación>
-├➽ *.reporte [reportar comandos con errores]*
+├➽ *.reporte [reportar cmd con errores]*
 ╰───────────────╯
 ✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥ *JUEGOS* 🎮
 ├➽ *tictactoe <nombre de la sala>*
 ├➽ *.Mates <modo>*
-├➽ *.ppt <papel/piedra/tijera>
-├➽ *.gay* <@tag> [perfil gay]
-├➽ *.doxear <@tag>
+├➽ *.ppt <papel/piedra/tijera>*
+├➽ *.gay* <@tag> [perfil gay]*
+├➽ *.doxear <@tag>*
 ├➽ *.Top <ejemplo: <.top pendejos>*
 ├➽ *.love <@tag>*
-├➽ *.pvp*  <@tag>
+├➽ *.pvp <@tag>*
 ├➽ *.juego [piedra/papel/tijera]*
-├➽ *.acertijo
+├➽ *.acertijo*
 ├➽ *.formarpareja [parejas ramdon]*
-├➽ *.slot [ruleta]
+├➽ *.slot [ruleta]*
 ︎╰───────────────
 ✫᭢━━━━━━━━━᭥✫᭢
 ╭──「❥ *CHATGPT* 📡
 ├➽ *.ia *<Chatgpt>*
-├➽ *.ia2 <Regenerador de imágenes>
-├➽ *.iavoz <chatgpt respuesta con audio>
-├➽ *.bot* <texto>
+├➽ *.ia2 <Regenerador de imágenes>*
+├➽ *.iavoz <respuesta con audio>*
+├➽ *.bot* <texto>*
 ╰───────────────╯
 ✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥ *STICKERS* ❥」
 ├➽ *.s*
-├➽ *.sticker
+├➽ *.sticker*
 ├➽ *.stickersearch <buscador de 📦 de stickers>
 ├➽ *.sermoverbg [sticker sin fondo]*
 ├➽ *.scircle [sticker circular]*
@@ -89,8 +89,8 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ╭─「❥ *FUN* 🤖
 ├➽ *.lolice @tag*
 ├➽ *.simpcard @tag*
-├➽ *.hornycard <licencia virtual FUN>
-├➽ *.estúpido @tag
+├➽ *.hornycard <licencia virtual FUN>*
+├➽ *.estúpido @tag*
 ├➽ *.meme*
 ├➽ *.toimg*
 ├➽ *.mp3 <vídeo a Audio>*
@@ -146,7 +146,7 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥ *REACCIONES* ❥」
 ├➽ *.kiss <tag>*
-├➽ *.pat* <tag>
+├➽ *.pat* <tag>*
 ╰───────────────╯
 ✫᭢━━━━━━━━━᭥✫᭢
 ╭──「❥ *DESCARGAS ⎙*
