@@ -51,7 +51,21 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *.leaderboard <tabla de calificación>
 ├➽ *.reporte [reportar comandos con errores]*
 ╰───────────────╯
-
+✫᭢━━━━━━━━━᭥✫᭢
+╭─「❥ *JUEGOS* 🎮
+├➽ *tictactoe <nombre de la sala>*
+├➽ *.Mates <modo>*
+├➽ *.ppt <papel/piedra/tijera>
+├➽ *.gay* <@tag> [perfil gay]
+├➽ *.doxear <@tag>
+├➽ *.Top <ejemplo: <.top pendejos>*
+├➽ *.love <@tag>*
+├➽ *.pvp*  <@tag>
+├➽ *.juego [piedra/papel/tijera]*
+├➽ *.acertijo
+├➽ *.formarpareja [parejas ramdon]*
+├➽ *.slot [ruleta]
+︎╰───────────────
 ✫᭢━━━━━━━━━᭥✫᭢
 ╭──「❥ *CHATGPT* 📡❥」
 ├➽ *.ia *<Chatgpt>*
@@ -60,10 +74,10 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *.bot* <texto>
 ╰───────────────╯
 ✫᭢━━━━━━━━━᭥✫᭢
-╭─「❥ *Stickers* ❥」
+╭─「❥ *STICKERS* ❥」
+├➽ *.s*
 ├➽ *.sticker
 ├➽ *.stickersearch <buscador de 📦 de stickers>
-├➽ *.wm <paquete | nombre>*
 ├➽ *.sermoverbg [sticker sin fondo]*
 ├➽ *.scircle [sticker circular]*
 ├➽ *.emojimix ☺&😈*
@@ -157,18 +171,6 @@ let str = `╭「➻❥DROID-8-MD➻❥」
 ├➽ *.tts [texto a Audio]
 ├➽ *.quemusica resultado*
 ╰───────────────╯
-✫᭢━━━━━━━━━᭥✫᭢
-╭─「❥🎮 *Juegos* 🎮❥」
-├➽ *.gay* <@tag> [perfil gay]
-├➽ *.doxear <@tag>
-├➽ *.Top* <ejemplo: <.top pendejos>
-├➽ *.love <@tag>*
-├➽ *.pvp*  <@tag>
-├➽ *.juego [piedra/papel/tijera]*
-├➽ *.acertijo *no disponible* 
-├➽ *.formarpareja [parejas ramdon]*
-├➽ *.slot [ruleta]
-︎╰───────────────
 ✫᭢━━━━━━━━━᭥✫᭢
 ╭─「❥🤴 *comandos-owner/admin"s* 🤴❥」
 ├➽ *.block*
