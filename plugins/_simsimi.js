@@ -1,28 +1,52 @@
-import fetch from 'node-fetch';
+const INACTIVITY_TIMEOUT_MS = 30 * 60 * 1000;
 
-const handler = async (m, {conn, text, usedPrefix, command}) => {
-  if (!text) {
-    throw `_*< IA - BARD />*_\n\n*[ ℹ️ ] Proporciona un texto.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} Hola Bard, ¿cómo estás?_`;
+async function deleteInactiveUserData(m) {
+  const user = global.chatgpt.data.users[m.sender];
+  if (!user) return; // Si no existe el usuario, no hace nada
+
+  const lastUpdateTime = user.lastUpdate || 0;
+  const currentTime = new Date().getTime();
+
+  if (currentTime - lastUpdateTime > INACTIVITY_TIMEOUT_MS) {
+    delete global.chatgpt.data.users[m.sender];
+    // console.log(`Datos del usuario ${m.sender} eliminados después de ${INACTIVITY_TIMEOUT_MS / 1000 / 60} minutos de inactividad.`);
+  }
+}
+
+export async function all(m) {
+  const user = global.chatgpt.data.users[m.sender];
+
+  if (user) {
+    user.lastUpdate = new Date().getTime();
+    global.chatgpt.data.users[m.sender] = user;
+  } else {
+    return; // Si no existe el usuario, no hace nada
   }
 
-  try {
-    conn.sendPresenceUpdate('composing', m.chat);
+  setTimeout(() => deleteInactiveUserData(m), INACTIVITY_TIMEOUT_MS);
+}
 
-    const API_URL = `https://vihangayt.me/tools/bard?q=${encodeURIComponent(text)}`;
-    const response = await fetch(API_URL);
-    const data = await response.json();
+/* const INACTIVITY_TIMEOUT_MS = 30 * 60 * 1000;
 
-    if (data.status && data.data) {
-      const respuestaAPI = data.data;
-      conn.reply(m.chat, respuestaAPI, m);
-    } else {
-      throw '_*< IA - BARD />*_\n\n*[ ℹ️ ] No se pudo obtener una respuesta válida.*';
-    }
-  } catch (error) {
-    throw `_*< IA - BARD />*_\n\n*[ ℹ️ ] Ocurrió un error. Por favor, inténtalo de nuevo más tarde.*`;
+async function deleteInactiveUserData(m) {
+  const user = global.chatgpt.data.users[m.sender];
+  const lastUpdateTime = user?.lastUpdate || 0;
+  const currentTime = new Date().getTime();
+
+  if (currentTime - lastUpdateTime > INACTIVITY_TIMEOUT_MS) {
+    delete global.chatgpt.data.users[m.sender];
+    //console.log(`Datos del usuario ${m.sender} eliminados después de ${INACTIVITY_TIMEOUT_MS / 1000 / 60} minutos de inactividad.`);
   }
-};
+}
 
-handler.command = /^bard$/i;
+export async function all(m) {
+  let user = global.chatgpt.data.users[m.sender];
 
-export default handler;
+  if (user) {
+    user.lastUpdate = new Date().getTime();
+    global.chatgpt.data.users[m.sender] = user;
+  }
+
+  setTimeout(() => deleteInactiveUserData(m), INACTIVITY_TIMEOUT_MS);
+
+}*/
