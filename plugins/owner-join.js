@@ -6,6 +6,7 @@ let [_, code] = link.match(linkRegex) || []
 
 if (!code) throw '🧑🏻‍💻 Ocurrió un error, por favor verifica que tu enlace no esté restablecido. Por ejemplo:\n\n*/join https://chat.whatsapp.com/GQnDkiNEyio2euVeq9FMkV*  Inténtalo de nuevo.'
 
+}
 let res = await conn.groupAcceptInvite(code)
 await m.reply(`*Ya me he unido a tu grupo. Espero poder serte de mucha ayuda. 🤖`)
 } else {
