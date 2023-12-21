@@ -9,10 +9,10 @@ import moment from 'moment-timezone';
 
 global.owner = [
   ['50240289706', 'CREADOR', true],
-  ['59169776370', 'CREADOR', true],
+  ['50240289706', 'CREADOR', true],
   ['50258487658', 'CREADOR', true],
   ['50240289706', 'CREADOR', true]
-  
+
 ];
 
 global.suittag = ['50240289706'];
@@ -28,9 +28,9 @@ global.yt = 'http://tiktok.com/@tony.1p';
 global.youtube = yt
 global.ig = 'https://www.instagram';
 global.hadesig = ig
-global.md = 'https://chat.whatsapp.com/GQnDkiNEyio2euVeq9FMkV';
+global.md = 'https://whatsapp.com/channel/0029Va80EZC5fM5f8fXgsQ0F';
 global.botxdf = md
-global.nn = 'https://chat.whatsapp.com/GQnDkiNEyio2euVeq9FMkV';
+global.nn = 'https://whatsapp.com/channel/0029Va80EZC5fM5f8fXgsQ0F';
 global.nngrupo = nn
 global.nnn = 'https://whatsapp.com/channel/0029Va80EZC5fM5f8fXgsQ0F';
 global.nnngrupo = nnn
