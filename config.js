@@ -8,14 +8,14 @@ import axios from 'axios';
 import moment from 'moment-timezone';
 
 global.owner = [
-  ['50240289700', 'CREADOR', true],
-  ['50240289700', 'CREADOR', true],
+  ['50240289706', 'CREADOR', true],
+  ['50240289706', 'CREADOR', true],
   ['50258487658', 'CREADOR', true],
   ['50240289706', 'CREADOR', true]
 
 ];
 
-global.suittag = ['50240289700'];
+global.suittag = ['50240289706'];
 global.prems = ['50258487658'];
 
 global.packname = 'DROID-8-MD-𝑐.ᵇᵒᵗ';
