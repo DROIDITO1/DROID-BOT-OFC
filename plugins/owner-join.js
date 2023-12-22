@@ -26,5 +26,5 @@ handler.help = ['join [chat.whatsapp.com]'];
 handler.tags = ['register'];
 handler.command = /^join|nuevogrupo$/i;
 handler.register = true;
-handler.limit = 2;
+handler.limit = 5;
 export default handler;
